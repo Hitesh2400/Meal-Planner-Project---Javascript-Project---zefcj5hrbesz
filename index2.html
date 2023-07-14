@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    
+    <div class="topnav">
+        <a href="#home">Meal Planner</a>
+        <div class="topnav-right">
+            <a href="#meals">Meals</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div id="home" class="meal-background">
+      <form class="meal-form">
+            <h2>Your Details</h2>
+
+            <label for="enter_height"><b>Height</b></label>
+            <input type="number" name="enter_height" id="height" placeholder="Enter Height" required>
+
+            <label for="enter_weight"><b>Weight</b></label>
+            <input type="number" name="enter_weight" id="weight" placeholder="Enter Weight" required>
+
+            <label for="age"><b>Age</b></label>
+            <input type="number" name="age" id="age" placeholder="Enter Age" required>
+
+            <button>Generate Meals</button>
+        </form>
+    </div>
+    
+    <div id="meals" class="meal-container hidden">
+        <div class="first-col">
+            <img alt="" width="400" height="300">
+            <p class="info"></p>
+            <ol class="ingredients">
+                <li><strong>Ingredients:</strong></li>
+            </ol>
+        </div>
+        <div class="second-col">
+            <h2></h2>
+            <p class="instructions"></p>
+            <iframe class="youtubevideo hidden" frameborder="0"></iframe>
+        </div>
+    </div>
+    <footer id="contact">
+        <p>Hitesh Ranjan Bhanj</p>
+        <p>For more, please click on below link to contact me</p>
+        <div class="social">
+            <a href="https://github.com/Hitesh2400" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.instagram.com/i_hitesh_ranjan_619/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="end">Copyright By Hitesh Ranjan Bhanj</p>
+    </footer>
+</body>
+</html>
