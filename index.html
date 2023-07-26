@@ -3,125 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Planner</title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="script1.js" defer></script> 
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- NavBar -->
-    <nav class="navbar">
-        <div class="meal-title">Meal Planner</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#meals">Meals</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <h1>Login Form</h1>
+    <div id="error"></div>
+    <form id="form" action="/index1.html" method="GET" class="form-container">
+        <div>
+            <label for="email">Enter Your Email: </label>
+            <input id="email" name="email" type="email" placeholder="Email" required>
         </div>
-    </nav>
-
-    <div class="bg">
-    </div>
-
-    <!-- Form to get Data -->
-    <h1 class="h3" id="home">Enter Details of You</h1>
-
-    <div class="form-container">
-        <div id="form">
-          <label for="height">Enter Height</label>
-          <input type="number" id="height" name="height" placeholder="Your Height.." required>
-      
-          <label for="weight">Enter Weight</label>
-          <input type="number" id="weight" name="weight" placeholder="Your Weight.." required>
-
-          <label for="age">Enter Age</label>
-          <input type="number" id="age" name="age" placeholder="Your Age.." required>
-      
-          <label for="country">Gender</label>
-          <select id="country" name="country">
-            <option value="select">Select option...</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-
-          <button id="Btn" onclick="showHide()" disabled="disabled">Generate Meals</button>
+        <div>
+            <label for="password">Enter Your Password: </label>
+            <input id="password" name="password" type="password" placeholder="Password">
         </div>
-    </div>
+        <button type="submit">Login</button>
 
-    <br>
-    <br>
-
-    <!-- Meal Card -->
-    <div id="row-card" class="row-card">
-        <div id="card" class="card">
-            <h2>Want some Suggestions?</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzHsOTQr4kizMfd6D4Q3iUpl7acuTdL0wqQ&usqp=CAU" alt="Image 1">
-            <p>The only way to keep your health is to eat what you don't want, drink what you don't like, and do what you'd rather not.</p>
-        </div>
-    
-        <div id="card" class="card">
-            <h2>Try From our Menu.</h2>
-            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" alt="Image 2">
-            <p>So long as you have food in your mouth, you have solved all questions for the time being.</p>
-        </div>
-    
-        <div id="card" class="card">
-            <h2>We can do the work for You.</h2>
-            <img src="https://www.acouplecooks.com/wp-content/uploads/2020/12/Honey-Garlic-Shrimp-026-735x919.jpg" alt="Image 3">
-            <p>Part of the secret of a success in life is to eat what you like and let the food fight it out inside.</p>
-        </div>
-
-        <div id="card" class="card">
-            <h2>Delicious Meals on Click</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUY2d9rdz37EfNl__ozTVnb8IzDKmOu67tyA&usqp=CAU" alt="Image 4">
-            <p>Food is your body's fuel. Without fuel, your body wants to shut down.</p>
-        </div>
-    </div>
-
-    <br>
-    <br>
-
-    <!-- Meal Container -->
-    <div class="container" id="meals">
-        <div class="ask-container">
-            <h1>Feeling hungry?</h1>
-            <button id="meal-button">Get Meal 🍔</button>
-        </div>
-        <div class="meal-container hidden">
-            <div class="first-col">
-                <img id="meal-img" width="400" height="300"/> 
-                <p class="info"></p>
-                <ol class="ingredients">
-                    <li><strong>Ingredients:</strong></li>
-                </ol>
-            </div>
-            <div class="second-col">
-                <h2></h2>
-                <p class="instructions"></p>
-                <iframe class="youtubevideo hidden" frameborder="0"></iframe>
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <br>
-
-    <!-- Contact Page -->
-    <footer id="contact">
-        <p>Hitesh Ranjan Bhanj</p>
-        <p>For more, please click on below link to contact me</p>
-        <div class="social">
-            <a href="https://github.com/Hitesh2400" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://www.instagram.com/i_hitesh_ranjan_619/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/917044072400"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <p class="end">Copyright By Hitesh Ranjan Bhanj</p>
-    </footer>
+    </form>
 </body>
 </html>
